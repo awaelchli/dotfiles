@@ -77,3 +77,7 @@ if [ -f /etc/profile.d/modules.sh ]; then
 	source /etc/profile.d/modules.sh
 fi
 
+
+# INF password store
+export INF_PASSWORD_STORE_DIR=~/repositories/inf-pass
+alias inf-pass='PASSWORD_STORE_DIR="$INF_PASSWORD_STORE_DIR" pass'
