@@ -71,3 +71,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# init shell for environment modules
+if [ -f /etc/profile.d/modules.sh ]; then
+	source /etc/profile.d/modules.sh
+fi
+
