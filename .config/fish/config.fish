@@ -1,3 +1,6 @@
+# disable greeting message
+set fish_greeting 
+
 # use bash aliases
 source ~/.bash_aliases
 
