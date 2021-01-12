@@ -1,0 +1,7 @@
+# GLOBAL GITIGNORE FILE
+#
+# it can be activated with this command:
+# git config --global core.excludesfile ~/.gitignore_global
+
+sms.yml
+sms.yaml

@@ -1,0 +1,5 @@
+[user]
+	email = adrian.waelchli@students.unibe.ch
+	name = Adrian Wälchli
+[core]
+	excludesfile = /home/adrian/.gitignore_global
