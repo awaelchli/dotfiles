@@ -96,7 +96,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-# global gitignore 
-git config --global core.excludesfile ~/.gitignore_global
-

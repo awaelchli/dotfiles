@@ -20,7 +20,3 @@ alias inf-pass='PASSWORD_STORE_DIR="$INF_PASSWORD_STORE_DIR" pass'
 # !! Contents within this block are managed by 'conda init' !!
 eval /usr/local/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
-
-# global gitignore
-git config --global core.excludesfile ~/.gitignore_global
-
