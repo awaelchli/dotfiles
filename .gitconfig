@@ -2,4 +2,4 @@
 	email = aedu.waelchli@gmail.com
 	name = Adrian Wälchli
 [core]
-	excludesfile = /home/adrian/.gitignore_global
+	excludesfile = ~/.gitignore_global
