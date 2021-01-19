@@ -9,7 +9,6 @@ sms.yml
 sms.yaml
 
 # compiled source
-*.com
 *.class
 *.dll
 *.exe
