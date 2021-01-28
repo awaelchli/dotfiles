@@ -43,6 +43,9 @@ case :$PATH: in
 	*) PATH=/home/$USER/.local/bin:$PATH ;;
 esac
 
+# colored prompt, also inside screen etc.
+force_color_prompt=yes
+
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm-color|*-256color) color_prompt=yes;;
