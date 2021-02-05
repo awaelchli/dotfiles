@@ -21,9 +21,8 @@ config config --local status.showUntrackedFiles no
 ## Example Usage
 
 ```bash
-cd ~
 config status
-config add .bashrc
+config add ~/.bashrc
 config commit -m "update bashrc"
 config push
 ```
