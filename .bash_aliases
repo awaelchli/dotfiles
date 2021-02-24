@@ -39,4 +39,5 @@ alias chmod='chmod --preserve-root'
 alias chgrp='chgrp --preserve-root'
 
 # reload bash config
-alias reload="source ~/.bashrc"
+alias reload='source ~/.bashrc'
+
