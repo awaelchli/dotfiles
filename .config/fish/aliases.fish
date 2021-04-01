@@ -28,14 +28,6 @@ alias ls="ls -lhF $LS_OPTIONS"
 alias lsmount="mount |column -t"
 alias mkdir="mkdir -pv"
 
-# get top process eating memory
-alias mem5="ps aux $PS_OPTIONS | sort -nr -k 4 | head -5"
-alias mem10="ps aux $PS_OPTIONS | sort -nr -k 4 | head -10"
-
-# get top process eating cpu
-alias cpu5="ps aux $PS_OPTIONS | sort -nr -k 3 | head -5"
-alias cpu10="ps aux $PS_OPTIONS | sort -nr -k 3 | head -10"
-
 # list largest directories
 alias dir5="du -cksh * | sort -hr | head -n 5"
 alias dir10="du -cksh * | sort -hr | head -n 10"
