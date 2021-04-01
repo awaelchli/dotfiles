@@ -1,17 +1,18 @@
 # system-specific options
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    LL_OPTIONS="--time-style=long-iso --color=auto"
-    LS_OPTIONS="--time-style=long-iso --color=auto"
-    RM_OPTIONS="-I --preserve-root"
-    CHOWN_OPTIONS="--preserve-root"
-    PS_OPTIONS="-f"
-fi
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    LL_OPTIONS="-G"
-    LS_OPTIONS="-G"
-    RM_OPTIONS="-i"
-fi
+switch (uname)
+    case Linux
+        set LL_OPTIONS "--time-style=long-iso --color=auto"
+        set LS_OPTIONS "--time-style=long-iso --color=auto"
+        set RM_OPTIONS "-I --preserve-root"
+        set CHOWN_OPTIONS "--preserve-root"
+        set PS_OPTIONS "-f"
 
+    case Darwin
+        set LL_OPTIONS "-G"
+        set LS_OPTIONS "-G"
+        set RM_OPTIONS "-i"
+
+end
 
 # command aliases
 alias ..="cd .."
@@ -53,5 +54,5 @@ alias chown="chown $CHOWN_OPTIONS"
 alias chmod="chmod $CHOWN_OPTIONS"
 alias chgrp="chgrp $CHOWN_OPTIONS"
 
-# reload bash config
-alias reload="source ~/.bashrc"
+# reload fish config
+alias reload='source ~/.config/fish/config.fish'

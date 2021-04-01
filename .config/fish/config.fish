@@ -2,10 +2,7 @@
 set fish_greeting 
 
 # use bash aliases
-source ~/.bash_aliases
-
-# new aliases
-alias reload='source ~/.config/fish/config.fish'
+source ~/.config/fish/aliases.fish
 
 # cheat.sh alias
 function cheat
