@@ -90,17 +90,22 @@ fi
 export INF_PASSWORD_STORE_DIR=~/repositories/inf-pass
 alias inf-pass='PASSWORD_STORE_DIR="$INF_PASSWORD_STORE_DIR" pass'
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+
+# conda setup
+if [ -d "/usr/local/anaconda3/" ]; then
+    ANACONDA_DIRECTORY="/usr/local/anaconda3/"
+elif [ -d "$HOME/anaconda3/" ]; then
+    ANACONDA_DIRECTORY="$HOME/anaconda3/"
+fi
+
+__conda_setup="$('$ANACONDA_DIRECTORY/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/usr/local/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "$ANACONDA_DIRECTORY/etc/profile.d/conda.sh" ]; then
+        . "$ANACONDA_DIRECTORY/etc/profile.d/conda.sh"
     else
-        export PATH="/usr/local/anaconda3/bin:$PATH"
+        export PATH="$ANACONDA_DIRECTORY/bin:$PATH"
     fi
 fi
 unset __conda_setup
-# <<< conda initialize <<<
