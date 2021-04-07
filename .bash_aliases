@@ -47,3 +47,6 @@ alias chgrp="chgrp $CHOWN_OPTIONS"
 
 # reload bash config
 alias reload="source ~/.bashrc"
+
+# run screen in UTF-8 mode
+alias screen="screen -U"

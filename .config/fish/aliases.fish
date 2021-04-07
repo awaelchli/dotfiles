@@ -48,3 +48,6 @@ alias chgrp="chgrp $CHOWN_OPTIONS"
 
 # reload fish config
 alias reload='source ~/.config/fish/config.fish'
+
+# run screen in UTF-8 mode
+alias screen="screen -U"
